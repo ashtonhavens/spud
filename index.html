@@ -1,0 +1,55 @@
+<d id="p">😀</d><h1 id="h">Welcome to Spudland™<br>Farm spuds with SPACE.<br>Click them when grown.<br>That's the game.<br>Have fun!</h1><d id="P"/><h2 id='s'></h2><script>d=document
+S='style'
+I='innerHTML'
+B=';background:'
+O=';position:absolute;border-radius:99Q;'
+W='width:'
+H=';height:'
+Q=requestAnimationFrame
+T=!0
+F=!1
+b=d.body
+b[S]=`text-align:center${B}#051`
+l=d.getElementById.bind(d)
+k={}
+x=200
+y=200
+c=0
+t=0
+P=0
+p=l('p')
+h=l('h')
+onkeydown=e=>k[e.key]=T
+onkeyup=e=>k[e.key]=F
+s=F
+n=Date.now
+L=F
+a=_=>{u=c
+L=T
+X=x
+Y=y
+s=T
+i=n()
+l('P')[I]+=`<d id="${i}"></d>`
+o=l(i)
+A=_=>{C=(c-u)/20
+o[S]=W+C*2+H+C+O+B+`#641;top:${Y-C};left:${X}`
+if(c-u==999){o[S].background='#531'
+o.onclick=_=>{P++
+l('s')[I]=`Score: ${P}`
+o.remove()
+L=F}}else Q(A)}
+A()}
+f=_=>{c+=1
+r=(n()-t)/2
+y+=k['w']?-r:k['s']?r:0
+x+=k['a']?-r:k['d']?r:0
+j=k[' ']
+if(j&&!s&&!L)a()
+if(!j)s=F
+h[S].color=c%60*r>30*r?"#fff":""
+p[S]=W+75+H+99+`;top:${y+O+B}#851;left:${x};z-index:9`
+t=n()
+d.title="Spudland "+P
+Q(f)}
+f()</script>
